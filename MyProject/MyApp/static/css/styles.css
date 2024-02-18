@@ -1,0 +1,48 @@
+* {
+  font-family: Andale Mono, monospace;
+  box-sizing: border-box;
+}
+body {
+  background-color: #055d82;
+}
+.login-page {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  padding: 45px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  background: #f2f2f2;
+  padding: 18px;
+  margin: 0 0 15px;
+  font-size: 15px;
+  outline: rgba(46, 26, 34, 0.2) solid 2px;
+  border: 0px;
+}
+button {
+  scale = 1;
+  width: 170px;
+  font-size: 15px;
+  margin-top: 20px;
+  border: 0px;
+}
+button:hover {
+  transition: 0.5s;
+  scale: 1.2;
+  background-color: rgba(46, 168, 203, 0.2);
+  outline: 1px ridge rgba(46, 168, 203, 0.2);
+  border-radius: 2rem;
+}
+.form input:focus {
+  transition: 0.3s;
+  outline: 1px ridge rgba(46, 168, 203, 0.2);
+  border-radius: 2rem;
+  background-color: rgba(46, 168, 203, 0.2);
+}
