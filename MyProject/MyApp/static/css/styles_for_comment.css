@@ -1,6 +1,11 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+a {
+    color: black;
+    text-decoration: none;
 }
 h1 {
   font-family: Georgia, serif;
@@ -43,6 +48,7 @@ h2 {
   text-align: center;
 }
 button {
+  color: black;
   transition: 0.3s;
   scale: 1;
   width: 15%;
