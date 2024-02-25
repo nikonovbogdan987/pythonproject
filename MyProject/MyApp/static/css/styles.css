@@ -19,6 +19,7 @@ body {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 0 rgba(0, 0, 0, 0.24);
 }
 .form input {
+  transition: 0.3s;
   background: #f2f2f2;
   padding: 18px;
   margin: 0 0 15px;
@@ -27,6 +28,7 @@ body {
   border: 0px;
 }
 button {
+  transition: 0.5s;
   scale = 1;
   width: 170px;
   font-size: 15px;
