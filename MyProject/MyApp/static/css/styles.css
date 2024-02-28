@@ -166,7 +166,6 @@ h2 {
   padding-top: 20px;
   font-weight: 900;
   font-size: 20px;
-
 }
 .box_button1 {
   text-align: right;
@@ -206,7 +205,6 @@ h2 {
   padding-top: 20px;
   font-weight: 900;
   font-size: 20px;
-
 }
 .box_button2 {
   padding-top: 7px;
@@ -215,18 +213,19 @@ h2 {
 .footer_box {
   display: flex;
   padding: 20px 0px 0px;
-  text-align: center;
+  width: 75%;
+  justify-content: space-between;
 }
 footer {
   margin-top: 20px;
   background-color: #1c1c1c;
   list-style-type: none;
   width: 100%;
+  max-width: 100%;
 }
 h4 {
   color: white;
   text-align: center;
-
 }
 .el {
   color: grey;
@@ -234,13 +233,8 @@ h4 {
   list-style-type: none;
   text-decoration: none;
   padding: 10px;
+
 }
 .el:hover {
   color: white;
-}
-.list_footer1 {
-  text-align: center;
-}
-.list_footer {
-  padding: 0px 200px 0px;
 }
