@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<section class = "sup_form">
+      <div>
+        <h1 class = "title_form_message">Напишите свой вопрос</h1>
+      </div>
+      <div class = "form_message">
+        <textarea id = "form" class = "form" rows="7" placeholder="пишите..."></textarea>
+      </div>
+      <div class = "box_btn_form_meassage">
+        <button class = "btn_form_meassage">ОТПРАВИТЬ</button>
+      </div>
+    </section>
+{% endblock %}
