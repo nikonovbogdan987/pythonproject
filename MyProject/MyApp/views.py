@@ -8,6 +8,8 @@ def PC(request):
 def support(request):
     return render(request, 'support.html')
 def Console(request):
-    return(request, 'Console.html')
+    return render(request, 'Console.html')
+def page_of_registration(request):
+    return render(request, 'page_of_registration.html')
 
 

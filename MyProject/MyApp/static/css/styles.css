@@ -238,6 +238,55 @@ body {
   scale: 1.2;
   box-shadow: 0 0 20px 0 #ae00ff;
 }
+.login_page {
+  margin-top: ;
+  font-family: Andale Mono, monospace;
+  box-sizing: border-box;
+  width: 20%;
+  height: 80%;
+  margin: auto;
+}
+.box_login_page {
+  position: relative;
+  z-index: 1;
+  padding: 45px;
+  text-align: center;
+  background-color: black;
+  box-shadow: 0 0 20px 0 #ae00ff;
+  border: 0;
+}
+.box_login_page input {
+  background: #1a1a1a;
+  padding: 18px;
+  margin: 0 0 15px;
+  font-size: 15px;
+  outline: rgba(46, 26, 34, 0.2) solid 2px;
+  border: 0px;
+}
+.btn_login_page {
+  transition: 0.5s;
+  color: grey;
+  scale = 1;
+  background: #1a1a1a;
+  width: 60%;
+  height: 3em;
+  font-size: 15px;
+  margin-top: 7%;
+  border: 0px;
+}
+.btn_login_page:hover {
+  transition: 0.5s;
+  scale: 1.2;
+  background-color: rgba(46, 168, 203, 0.2);
+  outline: 1px ridge rgba(46, 168, 203, 0.2);
+  border-radius: 2rem;
+}
+.box_login_page input:focus {
+  transition: 0.3s;
+  outline: 1px ridge rgba(46, 168, 203, 0.2);
+  border-radius: 2rem;
+  background-color: rgba(46, 168, 203, 0.2);
+}
 footer {
   background-color: black;
   margin-top: 50vh;
