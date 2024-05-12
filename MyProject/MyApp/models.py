@@ -25,4 +25,16 @@ class Orders(models.Model):
     class Meta:
         verbose_name = "заказ"
         verbose_name_plural = "Заказы"
+class Games(models.Model):
+    name = models.CharField(max_length=35, blank=False, help_text='название игры')
+    pictures = models.ImageField(help_text='фото игры')
+    genres = models.IntegerField(default=0, help_text="1 - PC, 2 - Console")
+    description = models.TextField(help_text='описание игры')
+
+    def str(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "игру"
+        verbose_name_plural = "Игры"
 
