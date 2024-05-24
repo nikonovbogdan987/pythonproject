@@ -13,6 +13,7 @@
      <section class = "login_page">
       <div class = "box_login_page">
         <form  method="POST" class="login-form">
+            {% crsrf_token %}
           <input name="username" type="text" placeholder="Имя">
         <input name="usersurname" type="text" placeholder="Фамилия">
         <input name="useremail" type="email" placeholder="e-mail">
