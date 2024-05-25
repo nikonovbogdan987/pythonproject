@@ -13,15 +13,15 @@
      <section class = "login_page">
       <div class = "box_login_page">
         <form  method="POST" class="login-form">
-            {% crsrf_token %}
-          <input name="username" type="text" placeholder="Имя">
-        <input name="usersurname" type="text" placeholder="Фамилия">
-        <input name="useremail" type="email" placeholder="e-mail">
-        <input name="userphonenumber" type="number" placeholder="номер телефона">
-        <input name="userpassword" type="password" placeholder="Пароль">
-        <button name="login_btn" class = "btn_login_page">
-          <p>Авторизироваться</p>
-        </button>
+            {% csrf_token %}
+            <input name="username" type="text" placeholder="Имя">
+            <input name="usersurname" type="text" placeholder="Фамилия">
+            <input name="useremail" type="email" placeholder="e-mail">
+            <input name="userphonenumber" type="number" placeholder="номер телефона">
+            <input name="userpassword" type="password" placeholder="Пароль">
+            <button name="login_btn" class = "btn_login_page">
+              <p>Авторизироваться</p>
+            </button>
         </form>
       </div>
     </section>
