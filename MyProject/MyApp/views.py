@@ -19,7 +19,7 @@ def page_of_registration(request):
             name = request.POST['username']
             surname = request.POST['usersurname']
             email = request.POST['useremail']
-            phonenumber = request.POST['userphonenumber']
+            phone = request.POST['userphonenumber']
             password = request.POST['userpassword']
         context = {
             'name' : name,
