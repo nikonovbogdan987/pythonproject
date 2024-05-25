@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Clients
 
 # Create your views here.
 def main(request):
@@ -28,6 +29,13 @@ def page_of_registration(request):
             'phone' : phone,
             'password' : password
         }
+        client = Clients()
+        client.name = request.POST["username"]
+        client.surname = request.POST["usersurname"]
+        client.email = request.POST["useremail"]
+        client.phone = request.POST["userphonenumber"]
+        client.password = request.POST["userpassword"]
+        client.save()
         return render(request, 'page_of_registration.html', context)
 
 
