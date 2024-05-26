@@ -3,13 +3,37 @@ from .models import Clients, Orders
 from django.conf import settings
 # Create your views here.
 def main(request):
-    return render(request, 'main.html')
+    context = {}
+    if not isinstance(settings.CURRENT_USER, str):
+        context = {
+            "current_user": settings.CURRENT_USER,
+            "orders": Orders.object.filter(author=settings.CURRENT_USER)
+        }
+    return render(request, 'main.html', context)
 def pc(request):
-    return render(request, 'PC.html')
+    context = {}
+    if not isinstance(settings.CURRENT_USER, str):
+        context = {
+            "current_user": settings.CURRENT_USER,
+            "orders": Orders.object.filter(author=settings.CURRENT_USER)
+        }
+    return render(request, 'PC.html', context)
 def support(request):
-    return render(request, 'support.html')
+    context = {}
+    if not isinstance(settings.CURRENT_USER, str):
+        context = {
+            "current_user": settings.CURRENT_USER,
+            "orders": Orders.object.filter(author=settings.CURRENT_USER)
+        }
+    return render(request, 'support.html', context)
 def console(request):
-    return render(request, 'Console.html')
+    context = {}
+    if not isinstance(settings.CURRENT_USER, str):
+        context = {
+            "current_user": settings.CURRENT_USER,
+            "orders": Orders.object.filter(author=settings.CURRENT_USER)
+        }
+    return render(request, 'Console.html', context)
 def page_of_registration(request):
         context = {}
         name = ''
@@ -34,10 +58,10 @@ def page_of_registration(request):
             if not isinstance(settings.CURRENT_USER, str):
                 context = {
                     "current_user" : settings.CURRENT_USER,
-                    #"orders" : Orders.object.filter(author=settings.CURRENT_USER)
+                    "orders" : Orders.object.filter(author=settings.CURRENT_USER)
                 }
-            return render(request, 'main.html')
-        return render(request, 'page_of_registration.html')
+            return render(request, 'main.html', context)
+        return render(request, 'page_of_registration.html', context)
 
 
 
