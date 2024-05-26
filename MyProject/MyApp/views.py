@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Clients
-
+from .models import Clients, Orders
+from django.conf import settings
 # Create your views here.
 def main(request):
     return render(request, 'main.html')
@@ -23,13 +23,6 @@ def page_of_registration(request):
             email = request.POST['useremail']
             phone = request.POST['userphonenumber']
             password = request.POST['userpassword']
-            context = {
-                'name' : name,
-                'surname' : surname,
-                'email' : email,
-                'phone' : phone,
-                'password' : password
-            }
             client = Clients()
             client.name = request.POST["username"]
             client.surname = request.POST["usersurname"]
@@ -37,6 +30,12 @@ def page_of_registration(request):
             client.phone = request.POST["userphonenumber"]
             client.password = request.POST["userpassword"]
             client.save()
+            settings.CURRENT_USER = client
+            if not isinstance(settings.CURRENT_USER, str):
+                context = {
+                    "current_user" : settings.CURRENT_USER,
+                    #"orders" : Orders.object.filter(author=settings.CURRENT_USER)
+                }
             return render(request, 'main.html')
         return render(request, 'page_of_registration.html')
 
