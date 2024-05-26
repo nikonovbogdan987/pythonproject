@@ -4,11 +4,11 @@ from .models import Clients
 # Create your views here.
 def main(request):
     return render(request, 'main.html')
-def PC(request):
+def pc(request):
     return render(request, 'PC.html')
 def support(request):
     return render(request, 'support.html')
-def Console(request):
+def console(request):
     return render(request, 'Console.html')
 def page_of_registration(request):
         context = {}
@@ -37,7 +37,7 @@ def page_of_registration(request):
             client.phone = request.POST["userphonenumber"]
             client.password = request.POST["userpassword"]
             client.save()
-        return render(request, 'page_of_registration', context)
+        return render(request, 'page_of_registration.html', context)
 
 
 
