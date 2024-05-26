@@ -22,20 +22,21 @@ def page_of_registration(request):
             email = request.POST['useremail']
             phone = request.POST['userphonenumber']
             password = request.POST['userpassword']
-        context = {
-            'name' : name,
-            'surname' : surname,
-            'email' : email,
-            'phone' : phone,
-            'password' : password
-        }
-        client = Clients()
-        client.name = request.POST["username"]
-        client.surname = request.POST["usersurname"]
-        client.email = request.POST["useremail"]
-        client.phone = request.POST["userphonenumber"]
-        client.password = request.POST["userpassword"]
-        client.save()
-        return render(request, 'page_of_registration.html', context)
+            context = {
+                'name' : name,
+                'surname' : surname,
+                'email' : email,
+                'phone' : phone,
+                'password' : password
+            }
+            client = Clients()
+            client.name = request.POST["username"]
+            client.surname = request.POST["usersurname"]
+            client.email = request.POST["useremail"]
+            client.phone = request.POST["userphonenumber"]
+            client.password = request.POST["userpassword"]
+            client.save()
+            return render(request, 'page_of_registration', context)
+
 
 
