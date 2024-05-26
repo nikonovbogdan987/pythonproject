@@ -37,7 +37,8 @@ def page_of_registration(request):
             client.phone = request.POST["userphonenumber"]
             client.password = request.POST["userpassword"]
             client.save()
-        return render(request, 'page_of_registration.html', context)
+            return render(request, 'main.html')
+        return render(request, 'page_of_registration.html')
 
 
 
