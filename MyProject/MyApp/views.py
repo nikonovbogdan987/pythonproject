@@ -11,6 +11,7 @@ def support(request):
 def Console(request):
     return render(request, 'Console.html')
 def page_of_registration(request):
+        context = {}
         name = ''
         surname = ''
         email = ''
@@ -36,7 +37,7 @@ def page_of_registration(request):
             client.phone = request.POST["userphonenumber"]
             client.password = request.POST["userpassword"]
             client.save()
-            return render(request, 'page_of_registration', context)
+        return render(request, 'page_of_registration', context)
 
 
 
